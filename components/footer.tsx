@@ -17,15 +17,6 @@ export default function Footer() {
 
           <div className="flex space-x-6 mb-4 md:mb-0">
             <Link
-              href="https://github.com/Sk-singla"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="GitHub Profile"
-            >
-              <Github size={20} />
-            </Link>
-            <Link
               href="https://linkedin.com/in/samarth-g"
               target="_blank"
               rel="noopener noreferrer"
@@ -47,6 +38,15 @@ export default function Footer() {
               aria-label="Phone"
             >
               <Phone size={20} />
+            </Link>
+            <Link
+              href="https://github.com/Sk-singla"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub Profile"
+            >
+              <Github size={20} />
             </Link>
           </div>
         </div>

@@ -31,10 +31,10 @@ export default function About() {
                     experiences and robust architectures. I'm passionate about leveraging cutting-edge technologies to
                     solve complex problems.
                   </p>
-                  <p className="text-lg">
+                  {/* <p className="text-lg">
                     When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and
                     continuously expanding my knowledge in the ever-evolving tech landscape.
-                  </p>
+                  </p> */}
 
                   {/* <div className="mt-6">
                     <Button className="flex items-center gap-2">

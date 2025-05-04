@@ -14,12 +14,12 @@ const skillCategories = [
   {
     title: "Frontend Technologies",
     icon: <Code2 className="h-6 w-6" />,
-    skills: ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "HTML/CSS"],
+    skills: ["React.js", "Next.js", "TypeScript", "HTML/CSS"],
   },
   {
     title: "Backend Technologies",
     icon: <Server className="h-6 w-6" />,
-    skills: ["Node.js", ".NET", "Ktor", "Express.js", "PHP"],
+    skills: ["Node.js", ".NET", "Express.js", "PHP","Ktor"],
   },
   {
     title: "Mobile Development",

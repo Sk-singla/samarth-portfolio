@@ -11,9 +11,9 @@ const experiences = [
     company: "Optmyzr",
     period: "Jun 2023 - Present",
     responsibilities: [
-      "Led implementation of Generative AI initiatives with Sidekick chatbot, enabling users to query account data and providing AI-powered ad text suggestions.",
+      "Led implementation of Generative AI initiatives with <a href='https://help.optmyzr.com/en/articles/5904076-account-dashboard-user-guide#h_88a68ae52e' target='_blank' class='underline'>Sidekick chatbot</a>, enabling users to query account data and providing AI-powered ad text suggestions.",
       "Enhanced Budget Trackers with comprehensive logging and redesigned UI/UX to consolidate multi-account management into a single intuitive interface.",
-      "Developed Magic Quadrants tool as the company's first Labs project, receiving high user appreciation and earning 2nd runner-up in the company hackathon.",
+      "Developed <a href='https://help.optmyzr.com/en/articles/10345381-magic-quadrants-insight-tool-user-guide' target='_blank' class='underline'>Magic Quadrants</a> tool as the company's first Labs project, receiving high user appreciation and earning 2nd runner-up in the company hackathon.",
       "Mentored junior developers and interns while contributing to core platform features and strategic initiatives.",
     ],
     technologies: ["C#", ".NET", "React.js", "TypeScript", "PHP", "MongoDB", "MySQL", "AWS S3", "Redis"],
@@ -23,9 +23,9 @@ const experiences = [
     company: "Optmyzr",
     period: "Apr 2022 - Jun 2023",
     responsibilities: [
-      "Contributed to Smart Exclusions automation tool, enabling automated exclusion of underperforming placements from advertising accounts.",
-      "Implemented spell check functionality in the Ad Text Optimization RSA tool, significantly improving user experience.",
-      "Redesigned the Hatquest webapp and marketing site, enhancing user experience through improved navigation and visual consistency.",
+      "Contributed to <a href='https://help.optmyzr.com/en/articles/6402785-smart-exclusions-for-apps-and-display' target='_blank' class='underline'>Smart Exclusions automation tool</a>, enabling automated exclusion of underperforming placements from advertising accounts.",
+      "Implemented spell check functionality in the <a href='https://help.optmyzr.com/en/articles/6311280-ad-text-optimization-rsa-user-guide' target='_blank' class='underline'>Ad Text Optimization RSA tool</a>, significantly improving user experience.",
+      "Redesigned the <a href='https://www.hatquest.com' target='_blank' class='underline'>Hatquest</a> webapp and marketing site, enhancing user experience through improved navigation and visual consistency.",
     ],
     technologies: ["React.js", "TypeScript", "C#", ".NET", "PHP", "MySQL", "Redis", "Hugo"],
   },
@@ -70,7 +70,7 @@ export default function Experience() {
 
                     <ul className="space-y-2 mb-4 list-disc pl-5">
                       {exp.responsibilities.map((resp, respIndex) => (
-                        <li key={respIndex}>{resp}</li>
+                        <li key={respIndex} dangerouslySetInnerHTML={{ __html: resp }} />
                       ))}
                     </ul>
 

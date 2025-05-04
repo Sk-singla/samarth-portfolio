@@ -50,7 +50,7 @@ export default function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title gradient-text">Projects</h2>
+          <h2 className="section-title gradient-text">Personal Projects</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {projects.map((project, index) => (
