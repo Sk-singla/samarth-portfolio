@@ -49,7 +49,7 @@ export default function About() {
             <div className="order-1 md:order-2 flex justify-center">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
                 <img
-                  src="/samarth_photo.jpeg?height=320&width=320"
+                  src="/sam_photo.jpg?height=320&width=320"
                   alt="Samarth Gupta"
                   className="object-cover w-full h-full"
                 />
