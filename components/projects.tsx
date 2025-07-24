@@ -7,49 +7,18 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 
-const projects = [
-  {
-    "title": "Wizournal",
-    "description": "AI-Powered Daily Journaling App",
-    "details": "Developed an innovative Android journaling application that transforms everyday thoughts into enchanting, AI-enhanced stories. Features include AI-driven content generation, dynamic thematic backgrounds, seamless voice-to-text input using Android's native speech recognition, and robust journal management with intuitive swipe-to-delete functionality. Built with Kotlin, Jetpack Compose for UI, Room for local data persistence, Koin for dependency injection, and Gemini API for core AI capabilities.",
-    "image": "/projects/wizournal/cover.png?height=300&width=600",
-    "technologies": ["Kotlin", "Jetpack Compose", "Room", "Koin", "Gemini API", "Android Speech Recognition"],
-    "github": "https://github.com/Sk-singla/WizardJournal",
-    "live": null
-  },
-  {
-    title: "Meme's Magic",
-    description: "Social Media Android App",
-    details:
-      "Developed a feature-rich social media platform for meme enthusiasts with real-time messaging using WebSockets and push notifications via Firebase Cloud Messaging. Built with Kotlin, Jetpack Compose for UI, Ktor for backend, and AWS S3 for media storage.",
-    image: "/projects/memes_magic/cover.png?height=300&width=600",
-    technologies: ["Kotlin", "Jetpack Compose", "Ktor", "WebSockets", "AWS S3", "Firebase"],
-    github: "https://github.com/Sk-singla/MemesMagicApp",
-    live: null,
-  },
-  {
-    title: "Music Genre Classification",
-    description: "Techniques Analysis",
-    details:
-      "Analyzed various machine learning algorithms to classify music genres based on audio features extracted using Python libraries. Compared multiple classification models including Random Forest, SVM, and Neural Networks with detailed result visualization.",
-    image: "/projects/music_genre_classfication/cover.png?height=300&width=600",
-    technologies: ["Python", "Machine Learning", "Data Analysis", "Neural Networks", "SVM", "Random Forest"],
-    github: "https://github.com/Sk-singla/Music-Genre-Classification-Techniques",
-    live: null,
-  },
-  // {
-  //   title: "Magic Quadrants Tool",
-  //   description: "Data Visualization Project",
-  //   details:
-  //     "Developed as Optmyzr's first Labs project, this tool helps digital marketers visualize performance data in a quadrant format, similar to Gartner's Magic Quadrant. Earned 2nd runner-up in the company hackathon.",
-  //   image: "/placeholder.svg?height=300&width=600",
-  //   technologies: ["React.js", "TypeScript", "C#", ".NET", "Data Visualization"],
-  //   github: null,
-  //   live: null,
-  // },
-]
+import projects from "@/components/projects-data"
+
+import React from "react"
+import { useRouter } from "next/navigation"
 
 export default function Projects() {
+  const router = useRouter()
+  const handleCardClick = (idx: number) => {
+    if (projects[idx].images && projects[idx].images.length > 0) {
+      router.push(`/projects/${idx}`)
+    }
+  }
   return (
     <section id="projects" className="section-padding">
       <div className="container px-4 mx-auto">
@@ -70,7 +39,10 @@ export default function Projects() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow">
+                <Card
+                  className={`h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow${project.images && project.images.length > 0 ? ' cursor-pointer' : ''}`}
+                  onClick={() => handleCardClick(index)}
+                >
                   <div className="relative h-48 lg:h-56 overflow-hidden">
                     <img
                       src={project.image || "/placeholder.svg"}
@@ -94,7 +66,7 @@ export default function Projects() {
                   </CardContent>
                   <CardFooter className="p-6 pt-0 flex gap-2">
                     {project.github && (
-                      <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Link href={project.github} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>
                         <Button variant="outline" size="sm" className="gap-1">
                           <Github className="h-4 w-4" />
                           GitHub
@@ -102,7 +74,7 @@ export default function Projects() {
                       </Link>
                     )}
                     {project.live && (
-                      <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                      <Link href={project.live} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>
                         <Button size="sm" className="gap-1">
                           <ExternalLink className="h-4 w-4" />
                           Live Demo
@@ -115,6 +87,7 @@ export default function Projects() {
             ))}
           </div>
         </motion.div>
+        {/* Modal removed: details now shown on separate page */}
       </div>
     </section>
   )
