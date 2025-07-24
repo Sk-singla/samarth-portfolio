@@ -9,6 +9,15 @@ import Link from "next/link"
 
 const projects = [
   {
+    "title": "Wizournal",
+    "description": "AI-Powered Daily Journaling App",
+    "details": "Developed an innovative Android journaling application that transforms everyday thoughts into enchanting, AI-enhanced stories. Features include AI-driven content generation, dynamic thematic backgrounds, seamless voice-to-text input using Android's native speech recognition, and robust journal management with intuitive swipe-to-delete functionality. Built with Kotlin, Jetpack Compose for UI, Room for local data persistence, Koin for dependency injection, and Gemini API for core AI capabilities.",
+    "image": "/projects/wizournal/cover.png?height=300&width=600",
+    "technologies": ["Kotlin", "Jetpack Compose", "Room", "Koin", "Gemini API", "Android Speech Recognition"],
+    "github": "https://github.com/Sk-singla/WizardJournal",
+    "live": null
+  },
+  {
     title: "Meme's Magic",
     description: "Social Media Android App",
     details:
