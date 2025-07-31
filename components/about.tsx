@@ -22,9 +22,7 @@ export default function About() {
               <Card>
                 <CardContent className="p-6">
                   <p className="mb-4 text-lg">
-                    I'm a Software Development Engineer with expertise in building modern web applications and
-                    AI-powered solutions. Previously at Optmyzr, I led Generative AI initiatives and developed
-                    tools that enhance digital marketing workflows.
+                    I’m a full-stack developer passionate about crafting seamless web and Android apps, with a strong background in both frontend and backend development. I enjoy building AI-powered solutions and have led impactful projects at Optmyzr.
                   </p>
                   <p className="mb-4 text-lg">
                     My technical journey spans frontend and backend development, with a focus on creating intuitive user
