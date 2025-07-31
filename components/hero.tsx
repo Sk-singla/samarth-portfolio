@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
           <h2 className="text-2xl md:text-3xl mb-8 font-medium text-muted-foreground">Software Engineer</h2>
           <p className="text-lg mb-10 text-muted-foreground max-w-2xl mx-auto">
-          Passionate about building innovative solutions. Currently working at <a href="https://www.optmyzr.com" className="underline" target="_blank">Optmyzr</a>.
+            I craft modern web apps and AI-powered tools that make a difference. From building seamless user experiences to leading impactful projects, I love turning ideas into reality.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">

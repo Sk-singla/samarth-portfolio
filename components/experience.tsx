@@ -9,7 +9,7 @@ const experiences = [
   {
     title: "Software Development Engineer",
     company: "Optmyzr",
-    period: "Jun 2023 - Present",
+    period: "Jun 2023 - July 2025",
     responsibilities: [
       "Led implementation of Generative AI initiatives with <a href='https://help.optmyzr.com/en/articles/5904076-account-dashboard-user-guide#h_88a68ae52e' target='_blank' class='underline'>Sidekick chatbot</a>, enabling users to query account data and providing AI-powered ad text suggestions.",
       "Enhanced Budget Trackers with comprehensive logging and redesigned UI/UX to consolidate multi-account management into a single intuitive interface.",

@@ -23,7 +23,7 @@ export default function About() {
                 <CardContent className="p-6">
                   <p className="mb-4 text-lg">
                     I'm a Software Development Engineer with expertise in building modern web applications and
-                    AI-powered solutions. Currently working at Optmyzr, I lead Generative AI initiatives and develop
+                    AI-powered solutions. Previously at Optmyzr, I led Generative AI initiatives and developed
                     tools that enhance digital marketing workflows.
                   </p>
                   <p className="mb-4 text-lg">
