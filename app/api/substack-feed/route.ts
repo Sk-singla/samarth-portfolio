@@ -25,12 +25,18 @@ export async function GET() {
         const match = item.content.match(/<img[^>]+src="([^">]+)"/);
         if (match) image = match[1];
       }
+      const description =
+        item.contentSnippet ||
+        item.summary ||
+        (item.content ? item.content.replace(/<[^>]+>/g, "").slice(0, 200) : "") ||
+        "";
       return {
         id: item.guid || item.link || item.title || Math.random().toString(),
         title: item.title || "Untitled",
         url: item.link || "#",
         publishedAt: item.isoDate || item.pubDate || "",
         image,
+        description,
       };
     });
     return NextResponse.json({ posts });

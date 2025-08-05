@@ -8,6 +8,7 @@ type SubstackPost = {
   url: string;
   publishedAt: string;
   image?: string;
+  description?: string;
 };
 
 const SUBSTACK_PROFILE = "https://substack.com/@samarth000";
@@ -122,6 +123,9 @@ export default function Substack() {
                   >
                     {post.title}
                   </a>
+                  {post.description && (
+                    <p className="text-gray-700 text-sm mb-2 line-clamp-3">{post.description}</p>
+                  )}
                   <span className="text-gray-500 text-sm mt-auto">
                     {post.publishedAt
                       ? new Date(post.publishedAt).toLocaleDateString("en-US", {
