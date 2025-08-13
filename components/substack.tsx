@@ -119,12 +119,12 @@ export default function Substack() {
                     href={post.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-blue-700 hover:underline mb-2"
+                    className="text-lg font-semibold hover:underline mb-2"
                   >
                     {post.title}
                   </a>
                   {post.description && (
-                    <p className="text-gray-700 text-sm mb-2 line-clamp-3">{post.description}</p>
+                    <p className="text-muted-foreground text-sm mb-2 line-clamp-3">{post.description}</p>
                   )}
                   <span className="text-gray-500 text-sm mt-auto">
                     {post.publishedAt
