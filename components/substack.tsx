@@ -61,7 +61,7 @@ export default function Substack() {
     // Use a dummy image if src is not provided
     const imageSrc =
       src ||
-      "https://placehold.co/600x300?text="+alt;
+      "https://placehold.co/600x300?text=" + alt;
 
     return (
       <div className="relative mb-4 rounded w-full h-48 overflow-hidden">
@@ -72,9 +72,8 @@ export default function Substack() {
         <img
           src={imageSrc}
           alt={alt}
-          className={`rounded w-full h-48 object-cover transition-opacity duration-500 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
+          className={`rounded w-full h-48 object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"
+            }`}
           loading="lazy"
           onLoad={() => setLoaded(true)}
         />
@@ -108,35 +107,36 @@ export default function Substack() {
         {!loading && !error && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {posts.length === 0 && <p className="col-span-full">No posts found.</p>}
-            {posts.map((post: SubstackPost) => (
-              <Card key={post.id} className="h-full hover:shadow-md transition-shadow">
-                <CardContent className="p-6 flex flex-col h-full">
+            {posts.map((post: SubstackPost, idx: number) => (
+              <a
+                key={idx}
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-transform hover:scale-105"
+              >
+                <Card key={post.id} className="h-full hover:shadow-md transition-shadow cursor-pointer">
+                  <CardContent className="p-6 flex flex-col h-full">
                     <AnimatedImage
                       src={getLowQualityImage(post.image)}
                       alt={post.title}
                     />
-                  <a
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg font-semibold hover:underline mb-2"
-                  >
-                    {post.title}
-                  </a>
-                  {post.description && (
-                    <p className="text-muted-foreground text-sm mb-2 line-clamp-3">{post.description}</p>
-                  )}
-                  <span className="text-gray-500 text-sm mt-auto">
-                    {post.publishedAt
-                      ? new Date(post.publishedAt).toLocaleDateString("en-US", {
+                    <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
+                    {post.description && (
+                      <p className="text-muted-foreground text-sm mb-2 line-clamp-3">{post.description}</p>
+                    )}
+                    <span className="text-gray-500 text-sm mt-auto">
+                      {post.publishedAt
+                        ? new Date(post.publishedAt).toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "short",
                           day: "numeric",
                         })
-                      : ""}
-                  </span>
-                </CardContent>
-              </Card>
+                        : ""}
+                    </span>
+                  </CardContent>
+                </Card>
+              </a>
             ))}
           </div>
         )}

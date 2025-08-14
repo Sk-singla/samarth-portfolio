@@ -40,7 +40,7 @@ export default function Projects() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card
-                  className={`h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow${project.images && project.images.length > 0 ? ' cursor-pointer' : ''}`}
+                  className={`h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow${project.images && project.images.length > 0 ? ' cursor-pointer hover:scale-105 transition-transform' : ''}`}
                   onClick={() => handleCardClick(index)}
                 >
                   <div className="relative h-48 lg:h-56 overflow-hidden">
